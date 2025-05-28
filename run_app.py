@@ -2,9 +2,13 @@ import streamlit as st
 import joblib
 import PyPDF2
 import docx
+import nltk
 import re
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
+
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 stop_words = set(stopwords.words('english'))
 lemma = WordNetLemmatizer()
